@@ -1,0 +1,34 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+RewriteRule ^lawyers/gary-cohen-partner‎ /lawyers/gary-cohen/ [L,NC,R=301]
+RewriteRule ^lawyers/jack-buchan-partner /lawyers/jack-buchan/ [L,NC,R=301]
+RewriteRule ^lawyers/garth-edwards-partner‎ /lawyers/garth-edwards/ [L,NC,R=301]
+RewriteRule ^lawyers/shannon-kwok-partner‎ /lawyers/shannon-kwok/ [L,NC,R=301]
+RewriteRule ^lawyers/barry-grabowski-partner‎ /lawyers/barry-grabowski/ [L,NC,R=301]
+RewriteRule ^lawyers/jean-oland-associate /lawyers/jean-oland/ [L,NC,R=301]
+RewriteRule ^lawyers/joseph-cuenca-partner /lawyers/joseph-cuenca/ [L,NC,R=301]
+RewriteRule ^lawyers/louise-lam-associate /lawyers/louise-lam/ [L,NC,R=301]
+
+RewriteRule ^Cohen_Buchan_Edwards/Site_Map.html /site-map/ [L,NC,R=301]
+RewriteRule ^Cohen_Buchan_Edwards/Kieran_Moore.html / [L,NC,R=301]
+RewriteRule ^lawyers/jacquiecbelaw.com /lawyers/ [L,NC,R=301]
+RewriteRule ^lawyers/katecbelaw.com /lawyers/ [L,NC,R=301]
+RewriteRule ^Court_Actions.html / [L,NC,R=301]
+RewriteRule ^Cohen_Buchan_Edwards/News/Entries/2011/1/26_January_News_Update.html /news/ [L,NC,R=301]
+RewriteRule ^Cohen_Buchan_Edwards/Jean_Oland.html /lawyers/jean-oland/ [L,NC,R=301]
+RewriteRule ^Cohen_Buchan_Edwards/News/rss.xml /news/ [L,NC,R=301]
+RewriteRule ^lawyers/louise-lam-articled-student /lawyers/louise-lam/ [L,NC,R=301]
+RewriteRule ^Kieran_Moore.html / [L,NC,R=301]
+RewriteRule ^Employment_Law.html /services/employment-law/ [L,NC,R=301]
+RewriteRule ^index.php%3Foption%3Dcom_content%26task%3Dview%26id%3D2%26Itemid%3D3 / [L,NC,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

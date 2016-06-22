@@ -1,0 +1,879 @@
+/*
+Theme Name: Cohen Buchan Edwards
+Theme URI: 
+Author: Brian Holt and Susan Van Dyke
+Author URI: http://www.vandykemarketing.com/
+Description: Custom theme built for Cohen Buchan Edwards by Van Dyke Marketing in 2014. Fully responsive with Bootstrap 3.
+Version: 1.0
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: 
+Text Domain: CBE
+
+Cohen Buchan Edwards WordPress Theme © 2014 Van Dyke Marketing
+*/
+
+@charset "UTF-8";
+/* colours
+  #a62536 = Logo Red
+  #83838E = Dark Grey
+  #DBDBDF = Light Grey
+  #ededef = Pale Grey
+*/
+
+html, body {
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -55px;
+  /* Pad bottom by footer height */
+  padding: 54px 0 55px;
+}
+h1 {
+  color: #a62536;
+  font-weight: normal;
+}
+h1>a,h2>a,h3>a,h4>a,h5>a,h6>a,.h1>a,.h2>a,.h3>a,.h4>a,.h5>a,.h6>a{
+  color: inherit;
+  -o-transition:color .2s ease-in;
+  -ms-transition:color .2s ease-in;
+  -moz-transition:color .2s ease-in;
+  -webkit-transition:color .2s ease-in;
+  transition:color .2s ease-in;
+}
+h1>a:hover,h2>a:hover,h3>a:hover,h4>a:hover,h5>a:hover,h6>a:hover,.h1>a:hover,.h2>a:hover,.h3>a:hover,.h4>a:hover,.h5>a:hover,.h6>a:hover{
+  color: #a62536;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+strong {
+  letter-spacing:.5px;
+}
+.rounded-corners {
+  border-radius: 8px;
+}
+.grey-bg {
+  background-color: #DBDBDF;
+}
+.red {
+  color: #a62536;
+  font-weight: normal;
+}
+/* Navigation ================================== */
+.navbar-fixed-top {
+  background-color: #f1f1f3;
+  border-bottom: 4px solid #a62536;
+}
+#logo {
+  background:#ffffff url("images/CBE-Logo.png") no-repeat left center;
+  height: 30px;
+  width: 81px;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.nav > li > a {
+  display: block;
+  padding: 15px 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -o-transition:color .2s ease-in;
+  -ms-transition:color .2s ease-in;
+  -moz-transition:color .2s ease-in;
+  -webkit-transition:color .2s ease-in;
+  transition:color .2s ease-in;
+}
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus {
+  text-decoration: none;
+  color: #83838E;
+  background-color:transparent;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #a62536;
+}
+#menu-main-nav > li.current-menu-item a {
+  color: #83838E;
+}
+#menu-main-nav > li.current-menu-item a:hover, #menu-main-nav > li.current-menu-item a:focus  {
+  color: #a62536;
+}
+@media (min-width: 768px) {
+  #logo {
+    margin: 10px 20px 10px 0;
+  }
+  .main-nav-collapse {
+    float: right;
+  }
+  .navbar .nav-li-search {
+    width: 180px;
+    float: right;
+    padding-left: 15px;
+    padding-right: 0;
+  }
+}
+@media (min-width:1200px) { /*992*/
+  #logo {
+    background: url("images/CBE-Logo-long.png") no-repeat left center;
+    width: 412px;
+  }
+}
+/* Automatic Photo-slider ================================== */
+.photo-slider {
+  border-bottom: 10px solid #781b27;
+  position: relative;
+  z-index: -1;
+}
+.photo-slide {
+  width: 100%;
+  min-height: 300px;
+}
+.photo-banner {
+  width: 100%;
+  min-height: 180px;
+}
+.photo-slide-2 {
+  background: url("images/backgrounds/aberdeen-centre.jpg") no-repeat bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-1 {
+  background: url("images/backgrounds/skytrain.jpg") no-repeat bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-3 {
+  background: url("images/backgrounds/city-hall.jpg") no-repeat bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-4 {
+  background: url("images/backgrounds/stevenson.jpg") no-repeat bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-5 {
+  background: url("images/backgrounds/cranes.jpg") no-repeat bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .photo-slide {
+    min-height: 520px;
+  }
+  .photo-banner {
+    min-height: 280px;
+  }
+}
+/* Page Banners ========================================= */
+.photo-slide-about {
+  background: url("images/backgrounds/about-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-services {
+  background: url("images/backgrounds/services-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-lawyers {
+  background: url("images/backgrounds/lawyers-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-news {
+  background: url("images/backgrounds/news-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-contact {
+  background: url("images/backgrounds/contact-map.jpg") no-repeat bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* Lawyer Banners =========================================== */
+.photo-slide-barry-grabowski {
+  background: url("images/lawyers/barry-grabowski-banner.jpg") no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+}
+.photo-slide-garth-edwards {
+  background: url("images/lawyers/garth-edwards-banner.jpg") no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+}
+.photo-slide-gary-cohen {
+  background: url("images/lawyers/gary-cohen-banner.jpg") no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+}
+.photo-slide-jack-buchan {
+  background: url("images/lawyers/jack-buchan-banner.jpg") no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+}
+.photo-slide-jean-oland {
+  background: url("images/lawyers/jean-oland-banner.jpg") no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+}
+.photo-slide-joseph-cuenca {
+  background: url("images/lawyers/joseph-cuenca-banner.jpg") no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+}
+.photo-slide-julia-lin {
+  background: url("images/lawyers/julia-lin-banner.jpg") no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+}
+.photo-slide-louise-lam {
+  background: url("images/lawyers/louise-lam-banner.jpg") no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+}
+.photo-slide-shannon-kwok {
+  background: url("images/lawyers/shannon-kwok-banner.jpg") no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-print-color-adjust: exact;
+}
+/* Services Slides ============================================ */
+.photo-slide-alternative-dispute-resolution {
+  background: url("images/backgrounds/alternative-dispute-resolution-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-business-law {
+  background: url("images/backgrounds/business-law-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-commercial-lending {
+  background: url("images/backgrounds/commercial-lending-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-employment-law {
+  background: url("images/backgrounds/employment-law-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-estate-disputes {
+  background: url("images/backgrounds/estate-disputes-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-estate-planning {
+  background: url("images/backgrounds/estate-planning-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-family-law {
+  background: url("images/backgrounds/family-law-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-general-litigation {
+  background: url("images/backgrounds/general-litigation-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-immigration-law {
+  background: url("images/backgrounds/immigration-law-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-maritime-law {
+  background: url("images/backgrounds/maritime-law-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-personal-injury {
+  background: url("images/backgrounds/personal-injury-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.photo-slide-real-estate {
+  background: url("images/backgrounds/real-estate-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* Services Front Banner and Breadcrumb banner ================================== */
+.services-banner {
+  background-color: rgba(77,77,80,.7);
+  width:100%;
+  overflow: hidden;
+  margin-top: -60px;
+  margin-bottom: 20px;
+}
+.services-banner a {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -o-transition:background-color .2s ease-in;
+  -ms-transition:background-color .2s ease-in;
+  -moz-transition:background-color .2s ease-in;
+  -webkit-transition:background-color .2s ease-in;
+  transition:background-color .2s ease-in;
+}
+.services-banner ul a:hover {
+  background-color: #a62536;
+}
+.services-banner ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+  text-align: center;
+}
+.services-banner li {
+  display: inline-block;
+}
+.services-banner a li {
+  padding: 15px 50px;
+}
+.services-banner .carousel-control {
+  top: -10px;
+}
+.carousel-inner ul {
+  display: inline-block;
+}
+.breadcrumb-banner {
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(77,77,80,.7);
+  text-shadow: 0 0 10px rgba(77,77,80,.7);
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 15px 50px;
+  margin-bottom: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+@media (min-width: 768px) {
+  .services-banner .carousel-control {
+    margin: 0 20px;
+    width: 0;
+  }
+  .breadcrumb-banner {
+    width: 30%;
+  }
+}
+/* Main Content ================================== */
+.main-content {
+  padding-bottom: 30px;
+}
+.main-content section {
+  margin-bottom: 30px;
+}
+.main-content article, .main-content aside {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.sidebar-box {
+  padding: 20px;
+}
+.sidebar-box > h4:first-of-type, .sidebar-box > h5:first-of-type {
+  margin-top: 0;
+}
+.sidebar-box > p {
+  margin-bottom: 20px;
+}
+.sidebar-box > p:last-of-type {
+  margin-bottom: 10px;
+}
+.sidebar-box > ul {
+  padding-left: 20px;
+}
+.sidebar-box > ul:first-of-type {
+  margin-bottom: 0;
+}
+.sidebar {
+  display: none;
+  padding: 20px 20px 0;
+}
+.sidebar > ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+.sidebar li {
+  padding: 10px 0;
+  border-bottom: 2px solid rgba(77,77,80,.1);
+}
+.sidebar a, .sidebar-box a {
+  color: #666666;
+}
+.sidebar a:hover, .sidebar a:focus, .sidebar-box a:hover, .sidebar-box a:focus {
+  color: #a62536;
+}
+.action {
+  color: #a62536;
+}
+a:hover .action {
+  color: #671722;
+}
+@media (min-width: 768px){
+  .sidebar {
+    display: block;
+  }
+}
+/* Contact =============================== */
+.floating-box {
+  background-color: rgba(77,77,80,.85);
+  text-shadow: 0 0 10px rgba(77,77,80,.85);
+  color: #fff;
+  padding: 20px;
+  margin: 50px 0;
+}
+.floating-box > h1 {
+  color: #fff;
+  margin-top: 10px;
+}
+.floating-box > h5 {
+  margin-top: 25px;
+}
+.floating-box p {
+  margin-bottom: 15px;
+}
+.floating-box p:last-of-type {
+  margin-bottom: 5px;
+}
+.floating-box a {
+  color: #fff;
+}
+.floating-box a:hover, .floating-box a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+.btn-contact {
+  border-color: transparent;
+  width: 33%;
+}
+.form-group, .contact-form button, .contact-form select, .contact-form textarea {
+  margin-top: 15px;
+}
+/* News ================================== */
+.byline {
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(77,77,80,.1);
+}
+.author-pic {
+  display: none;
+  float:left;
+  margin-top: 8px;
+  padding-right: 30px;
+}
+.author-pic > p {
+  text-align: center;
+  font-size: .85em;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding: 10px;
+  border-top: 2px solid rgba(77,77,80,.1);
+  border-bottom: 2px solid rgba(77,77,80,.1);
+}
+.author-pic > p:first-line  {
+  font-weight: bold;
+}
+.author-pic a {
+  color: #666666;
+}
+.author-pic a:hover {
+  color: #a62536;
+}
+.filter {
+  cursor: pointer;
+}
+.social-media-sharing {
+  margin-top: 50px;
+}
+.pagination {
+  margin-top: 30px;
+}
+@media (min-width: 768px){
+  .author-pic {
+    display: block;
+  }
+}
+/* Services Page ================================== */
+.service-box {
+  background-color: rgba(77,77,80,.4);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 25px 15px;
+  border: 2px solid #f1f1f3;
+}
+a:hover > .service-box {
+  background-color: rgba(77,77,80,.8);
+}
+a:hover > .service-box-image-reveal {
+  text-shadow: 0 0 15px #000;
+}
+.service-box-image-reveal-alternative-dispute-resolution {
+  background: url(images/services/alternative-dispute-resolution.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-alternative-dispute-resolution {
+  background: url(images/services/alternative-dispute-resolution.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-business-law {
+  background: url(images/services/business-law.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-business-law {
+  background: url(images/services/business-law.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-commercial-lending {
+  background: url(images/services/commercial-lending.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-commercial-lending {
+  background: url(images/services/commercial-lending.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-employment-law {
+  background: url(images/services/employment-law.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-employment-law {
+  background: url(images/services/employment-law.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-estate-disputes {
+  background: url(images/services/estate-disputes.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-estate-disputes {
+  background: url(images/services/estate-disputes.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-estate-planning {
+  background: url(images/services/estate-planning.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-estate-planning {
+  background: url(images/services/estate-planning.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-family-law {
+  background: url(images/services/family-law.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-family-law {
+  background: url(images/services/family-law.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-general-litigation {
+  background: url(images/services/general-litigation.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-general-litigation {
+  background: url(images/services/general-litigation.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-immigration-law {
+  background: url(images/services/immigration-law.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-immigration-law {
+  background: url(images/services/immigration-law.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-maritime-law {
+  background: url(images/services/maritime-law.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-maritime-law {
+  background: url(images/services/maritime-law.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-personal-injury {
+  background: url(images/services/personal-injury.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-personal-injury {
+  background: url(images/services/personal-injury.png) center center no-repeat rgba(77,77,80,.8);
+}
+.service-box-image-reveal-real-estate {
+  background: url(images/services/real-estate.png) center -80px no-repeat rgba(77,77,80,.4);
+  -o-transition:background-position .25s ease-in;
+  -ms-transition:background-position .25s ease-in;
+  -moz-transition:background-position .25s ease-in;
+  -webkit-transition:background-position .25s ease-in;
+  transition:background-position .25s ease-in;
+}
+a:hover > .service-box-image-reveal-real-estate {
+  background: url(images/services/real-estate.png) center center no-repeat rgba(77,77,80,.8);
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+  .service-box-image-reveal-alternative-dispute-resolution {
+    font-size: 1.1em;
+    padding: 26.5px 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .service-box-image-reveal-alternative-dispute-resolution {
+    font-size: .9em;
+    padding: 19px 15px;
+  }
+}
+/* Lawyers Page ================================== */
+.lawyer-box {
+  margin-bottom: 30px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(77,77,80,.4);
+  background-color: #fff;
+}
+.lawyer-box img {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  -o-transition:all .25s ease-in;
+  -ms-transition:all .25s ease-in;
+  -moz-transition:all .25s ease-in;
+  -webkit-transition:all .25s ease-in;
+  transition:all .25s ease-in;
+}
+.lawyer-box:hover img {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+.lawyer-box > p {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+.lawyer-box > p:last-of-type {
+  float: right;
+  margin-right: 0;
+}
+.lawyer-box a {
+  color: #666666;
+}
+.lawyer-box a:hover  {
+  color: #a62536;
+}
+.print-page {
+  cursor: pointer;
+  color: #666666;
+}
+.print-page:hover {
+  color: #a62536;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .lawyer-box > p:last-of-type {
+    float: none;
+  }
+}
+/* Footer ================================== */
+.main-footer {
+  margin-top: 30px;
+  min-height: 55px;
+  width: 100%;
+  font-size: .8em;
+  padding: 15px 0;
+  background-color:rgba(77,77,80,.7);
+  color: #DBDBDF;
+}
+.main-footer ul {
+  padding-left: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.main-footer a {
+  color: #DBDBDF;
+  text-decoration: none;
+}
+.main-footer a:hover,
+.main-footer a:focus {
+  color: #DBDBDF;
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .main-footer {
+    margin-top: 0;
+  }
+  .main-footer ul {
+    text-align: left;
+  }
+  .main-footer ul li {
+    display: inline-block;
+    padding-right: 30px;
+  }
+  .main-footer ul li:last-child {
+    float:right;
+  }
+}
+/* WP ========================================== */
+.entry-meta {
+  margin-bottom: 30px;
+}
+.synved-social-container {
+  margin-top: 30px;
+}
+.auto-width {
+  width: auto;
+}
+.inline-block {
+  display: inline-block;
+}
+.post > p:nth-of-type(2){
+  margin-bottom:20px;
+  font-size:16px;
+  line-height:1.4;
+}
+@media (min-width:768px){
+  .post > p:nth-of-type(2){
+    font-size:21px;
+    font-weight:300;
+  }
+}
+
+/* Bootstrap Carousel ============================*/
+.carousel-fade > .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade > .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade > .carousel-inner .active.left,
+.carousel-fade > .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade > .carousel-inner .next.left,
+.carousel-fade > .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade > .carousel-control {
+  z-index: 2;
+}
